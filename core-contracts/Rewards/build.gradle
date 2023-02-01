@@ -71,7 +71,7 @@ deployJar {
             to = Addresses.lisbon.rewards
         }
         local {
-            uri = 'http://localhost:9082/api/v3'
+            uri = 'http://localhost:9080/api/v3'
             nid = 0x3
         }
         mainnet {

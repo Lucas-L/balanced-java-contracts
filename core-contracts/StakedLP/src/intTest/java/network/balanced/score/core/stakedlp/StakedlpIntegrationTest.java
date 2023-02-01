@@ -75,10 +75,10 @@ public class StakedlpIntegrationTest {
         stakedlp = new StakedLPScoreClient(balanced.stakedLp);
         dex = new DexScoreClient(balanced.dex);
         governance = new GovernanceScoreClient(balanced.governance);
-        DefaultScoreClient clientWithTester3 = new DefaultScoreClient("http://localhost:9082/api/v3",
+        DefaultScoreClient clientWithTester3 = new DefaultScoreClient("http://localhost:9080/api/v3",
                 BigInteger.valueOf(3), userWallet, balanced.dex._address());
 
-        DefaultScoreClient clientWithTester4 = new DefaultScoreClient("http://localhost:9082/api/v3",
+        DefaultScoreClient clientWithTester4 = new DefaultScoreClient("http://localhost:9080/api/v3",
                 BigInteger.valueOf(3), userWallet, balanced.stakedLp._address());
         tokenAClient = _deploy(chain.getEndpointURL(), chain.networkId, owner, jarfile.getPath(),
                 Map.of("name", "Test Token", "symbol", "TT"));
@@ -96,9 +96,9 @@ public class StakedlpIntegrationTest {
     @Order(1)
     void testStakeAndUnstake() {
 
-        DexTestScoreClient userDexTestScoreClient = new DexTestScoreClient("http://localhost:9082/api/v3",
+        DexTestScoreClient userDexTestScoreClient = new DexTestScoreClient("http://localhost:9080/api/v3",
                 BigInteger.valueOf(3), userWallet, tokenAClient._address());
-        DexTestScoreClient userDexTestBaseScoreClient = new DexTestScoreClient("http://localhost:9082/api/v3",
+        DexTestScoreClient userDexTestBaseScoreClient = new DexTestScoreClient("http://localhost:9080/api/v3",
                 BigInteger.valueOf(3), userWallet, tokenBClient._address());
 
         byte[] tokenDeposit = "{\"method\":\"_deposit\",\"params\":{\"none\":\"none\"}}".getBytes();

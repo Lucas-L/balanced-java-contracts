@@ -23,7 +23,7 @@ public enum Network {
     BERLIN("https://berlin.net.solidwallet.io/api/v3", BigInteger.valueOf(7L)),
     LISBON("https://lisbon.net.solidwallet.io/api/v3", BigInteger.valueOf(2L)),
     MAINNET("https://ctz.solidwallet.io/api/v3", BigInteger.valueOf(3L)),
-    LOCAL("http://localhost:9082/api/v3", BigInteger.valueOf(3L));
+    LOCAL("http://localhost:9080/api/v3", BigInteger.valueOf(3L));
 
     private final String url;
     private final BigInteger nid;
